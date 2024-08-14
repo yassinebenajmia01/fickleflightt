@@ -1,6 +1,8 @@
 import Bar from "./Component/bar";
 import Header from "./Component/header";
+import Prepare from "./Component/prepare";
 import Recent from "./Component/recent";
+
 
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
         <Header/>
         <Bar/>
         <Recent/>
+        <Prepare/>
+        
         </>
       );
     }

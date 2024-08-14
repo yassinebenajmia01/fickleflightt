@@ -1,41 +1,32 @@
 import React from 'react';
+import { FaPlane } from 'react-icons/fa';
 
-export default function Recent() {
+function Recent() {
   return (
-    <div className="p-4">
-      <h2 className="text-sm font-semibold mb-4">Recent Searches</h2>
-
+    <div className="p-6 mt-24">
+      <h2 className="text-xl font-semibold mb-4 text-gray-800">RECENT SEARCHES</h2>
       <div className="flex space-x-4">
-        <div className="bg-white border border-gray-200 rounded-lg p-4 flex items-center space-x-4">
-          <span className="text-blue-600 font-bold">SIN</span>
-          <div className="flex items-center space-x-1">
-            <span className="text-gray-500">○</span>
-            <span className="text-gray-500">○</span>
-            <span className="text-blue-600">✈️</span>
-            <span className="text-gray-500">○</span>
-            <span className="text-gray-500">○</span>
+        {/* First Search */}
+        <div className="flex flex-col items-center justify-center p-4 w-56">
+          <div className="flex items-center justify-center">
+            <span className="text-blue-600 text-lg font-bold size-[44px] mr-10 mb-14">SIN</span>
+            <FaPlane size={30} className="mx-2 absolute ml-[35%] mb-14" color="#007bff" />
+            <span className="text-blue-600 text-lg font-bold absolute ml-[60%] size-[44px] mb-14">LAX</span>
           </div>
-          <span className="text-blue-600 font-bold">LAX</span>
-          <div className="ml-6 text-sm text-gray-600">
-            <span className="font-semibold">Depart On:</span> 7 Sep 2021
-          </div>
+          <p className="text-center text-black font-bold text-lg absolute left-0 ml-72 mt-4">Depart On: <span className="font-semibold">7 Sep 2021</span></p>
         </div>
-
-        <div className="bg-white border border-gray-200 rounded-lg p-4 flex items-center space-x-4">
-          <span className="text-blue-600 font-bold">MY</span>
-          <div className="flex items-center space-x-1">
-            <span className="text-gray-500">○</span>
-            <span className="text-gray-500">○</span>
-            <span className="text-blue-600">✈️</span>
-            <span className="text-gray-500">○</span>
-            <span className="text-gray-500">○</span>
+        {/* Second Search */}
+        <div className="flex flex-col items-center justify-center  p-4 w-56">
+          <div className="flex items-center justify-center">
+            <span className="text-blue-600 text-lg font-bold absolute ml-[70%] size-[44px] mb-14">MY</span>
+            <FaPlane size={30} className="mx-2 absolute ml-[100%] mb-14"  color="#007bff"/>
+            <span className="text-blue-600 text-lg font-bold absolute ml-[140%] size-[44px] mb-14">DUB</span>
           </div>
-          <span className="text-blue-600 font-bold">DUB</span>
-          <div className="ml-6 text-sm text-gray-600">
-            <span className="font-semibold">Depart On:</span> 9 Sep 2021
-          </div>
+          <p className="text-center text-black font-bold text-lg absolute right-1 mr-72 mt-4">Depart On: <span className="font-semibold ">9 Sep 2021</span></p>
         </div>
       </div>
     </div>
   );
 }
+
+export default Recent;
