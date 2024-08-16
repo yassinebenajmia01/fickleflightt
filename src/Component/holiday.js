@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Holiday() {
   const holidays = [
@@ -26,15 +27,17 @@ function Holiday() {
       price: '$789',
       image: 'palawan.png', 
     },
-  ];
+  ]
 
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">
         Recommended Holidays
-        <span className="text-blue-500 text-sm mt-4 inline-block ml-[72%]">
-          View all holidays ➔
-        </span>
+        <Link to="/allholidays">
+          <button className="text-blue-500 text-sm mt-4 inline-block ml-[72%]">
+            View all holidays ➔
+          </button>
+        </Link>
       </h2>
 
       <div className="grid grid-cols-4 gap-4">
@@ -49,9 +52,9 @@ function Holiday() {
               className="w-full h-45 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-800 absolute top-72 mt-4 ">{holiday.name}</h3>
-              <p className="text-sm text-gray-500 absolute top-80 mt-3">{holiday.duration}</p>
-              <p className="text-2xl font-extrabold text-blue-600  ml-64">{holiday.price}</p>
+              <h3 className="text-lg font-semibold text-gray-800 absolute top-72 mt-12 ">{holiday.name}</h3>
+              <p className="text-sm text-gray-500 absolute top-80 mt-11">{holiday.duration}</p>
+              <p className="text-2xl font-extrabold text-blue-600  ml-72">{holiday.price}</p>
             </div>
           </div>
         ))}

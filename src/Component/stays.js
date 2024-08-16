@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Stays() {
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
   const stays = [
     {
       type: 'Entire bungalow',
@@ -8,7 +10,8 @@ function Stays() {
       price: '$575/night',
       rating: '4.9',
       reviews: '60 reviews',
-      image: 'ms.png', 
+      image: 'ms.png',
+      videoLink: 'https://www.youtube.com/watch?v=aZVwI1YVmPw', 
     },
     {
       type: '2-Story beachfront',
@@ -16,7 +19,8 @@ function Stays() {
       price: '$360/night',
       rating: '4.8',
       reviews: '116 reviews',
-      image: 'ds.png', 
+      image: 'ds.png',
+      videoLink: 'https://www.youtube.com/embed/T9ShLWKOxFk',
     },
     {
       type: 'Single deluxe hut',
@@ -24,7 +28,8 @@ function Stays() {
       price: '$420/night',
       rating: '4.7',
       reviews: '78 reviews',
-      image: 'ah.png', 
+      image: 'ah.png',
+      videoLink: 'https://www.youtube.com/embed/chpwLUiGQbQ',
     },
     {
       type: 'Deluxe King Room',
@@ -32,9 +37,14 @@ function Stays() {
       price: '$244/night',
       rating: '4.6',
       reviews: '63 reviews',
-      image: 'lli.png', 
+      image: 'lli.png',
+      videoLink: 'https://www.youtube.com/embed/WteZwxsvICc',
     },
   ];
+
+  const handleVideoClick = (videoLink) => {
+    setSelectedVideo(videoLink);
+  };
 
   return (
     <div className="p-6">
@@ -58,8 +68,10 @@ function Stays() {
             />
             <div className="mt-4 flex items-center">
               <p className="text-sm text-gray-500">{stay.type}</p>
-              {/* Video Button */}
-              <button className="bg-transparent py-2 px-2 border border-sky-700 rounded-full ml-52">
+              <button
+                className="bg-transparent py-2 px-2 border border-sky-700 rounded-full ml-52"
+                onClick={() => handleVideoClick(stay.videoLink)}
+              >
                 ▶
               </button>
             </div>
@@ -77,6 +89,23 @@ function Stays() {
           </div>
         ))}
       </div>
+
+      {selectedVideo && (
+        <div className="mt-8">
+          <h3 className="text-2xl font-bold text-gray-800">Video</h3>
+          <div className="mt-4">
+            <iframe
+              width="560"
+              height="315"
+              src={selectedVideo}
+              title="Video Player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
