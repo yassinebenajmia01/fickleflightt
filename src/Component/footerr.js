@@ -16,13 +16,13 @@ function Footerr() {
             <span> and hotel bookings. We also have all your flight needs in you online shop.</span>
           </p>
           <div className="flex mt-4 space-x-4 ml-10">
-            <a href="#" className="hover:text-gray-400 bg-white text-blue-600 rounded-full w-6 h-6">
+            <a href="https://www.facebook.com/profile.php?id=100083937234291" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 bg-white text-blue-600 rounded-full w-6 h-6" >
               <i className="fab fa-facebook-f ml-2"></i> 
             </a>
-            <a href="#" className="hover:text-gray-400 bg-white text-blue-600 rounded-full w-6 h-6">
+            <a href="https://www.instagram.com/ficklefly/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 bg-white text-blue-600 rounded-full w-6 h-6">
               <i className="fab fa-instagram ml-1"></i> 
             </a>
-            <a href="#" className="hover:text-gray-400 bg-white text-blue-600 rounded-full w-6 h-6">
+            <a href="https://x.com/FlyFickle" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 bg-white text-blue-600 rounded-full w-6 h-6">
               <i className="fab fa-twitter ml-1"></i> 
             </a>
           </div>

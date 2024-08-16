@@ -22,7 +22,7 @@ function ViewMore() {
     <div className="p-6">
       <h2 className="text-2xl font-bold text-gray-800">More Destinations</h2>
       <Link to="/popular">
-          <button className="text-blue-500 text-sm absolute top-[134%] inline-block ml-[90%] font-bold">
+          <button className="text-blue-500 text-lg absolute top-[134%] inline-block ml-[90%] font-bold">
             Go Back ➔
           </button>
         </Link>

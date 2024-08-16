@@ -19,12 +19,12 @@ function Popular() {
 
   return (
     <div className="p-6">
-      <span className="text-blue-500 text-sm mt-4 inline-block font-bold">PLAN YOUR NEXT TRIP</span>
+      <span className="text-blue-500 text-sm mt-4 inline-block ">PLAN YOUR NEXT TRIP</span>
       <h2 className="text-2xl font-bold text-gray-800">
         Most Popular Destinations
         {/* Use Link for navigation */}
         <Link to="/viewmore">
-          <button className="text-blue-500 text-sm mt-4 inline-block ml-[68%] font-bold">
+          <button className="text-blue-500 text-lg mt-4 inline-block ml-[68%] font-bold">
             View all destinations ➔
           </button>
         </Link>

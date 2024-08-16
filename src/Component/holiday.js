@@ -34,7 +34,7 @@ function Holiday() {
       <h2 className="text-2xl font-bold text-gray-800 mb-4">
         Recommended Holidays
         <Link to="/allholidays">
-          <button className="text-blue-500 text-sm mt-4 inline-block ml-[72%]">
+          <button className="text-blue-500 text-lg mt-4 inline-block ml-[72%]">
             View all holidays ➔
           </button>
         </Link>

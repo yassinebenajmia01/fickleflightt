@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Stays() {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -11,7 +13,7 @@ function Stays() {
       rating: '4.9',
       reviews: '60 reviews',
       image: 'ms.png',
-      videoLink: 'https://www.youtube.com/watch?v=aZVwI1YVmPw', 
+      videoLink: 'https://www.youtube.com/watch?v=vj9ett3Igwk', 
     },
     {
       type: '2-Story beachfront',
@@ -43,16 +45,21 @@ function Stays() {
   ];
 
   const handleVideoClick = (videoLink) => {
-    setSelectedVideo(videoLink);
+    const embeddableLink = videoLink.replace('watch?v=', 'embed/');
+    setSelectedVideo(embeddableLink);
   };
+  
 
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">
         Popular Stays
-        <span className="text-blue-500 text-sm mt-4 inline-block ml-[81%]">
-          View all stays ➔
-        </span>
+        <Link to="/allstays">
+          <button className="text-blue-500 text-lg mt-4 inline-block ml-[80%] font-bold">
+            View all stays ➔
+          </button>
+        </Link>
+        
       </h2>
 
       <div className="grid grid-cols-4 gap-4">
@@ -83,9 +90,11 @@ function Stays() {
                 ({stay.reviews})
               </a>
             </div>
-            <button className="mt-4 bg-white text-blue-700 text-sm font-semibold py-2 px-28 rounded border border-sky-700">
-              MORE DETAILS
-            </button>
+            <Link to={`/stay/${stay.name}`}>
+  <button className="mt-4 bg-white text-blue-700 text-sm font-semibold py-2 px-28 rounded border border-sky-700">
+    MORE DETAILS
+  </button>
+</Link>
           </div>
         ))}
       </div>
