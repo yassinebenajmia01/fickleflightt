@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer
       className="bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('bg.png')" }}
+      style={{ backgroundImage: "url('https://i.im.ge/2024/08/17/fL8veW.bg.png')" }}
     >
       <div className="max-w-screen-md mx-auto text-center p-36">
         <h2 className="text-blue-600 font-bold text-lg">SUBSCRIBE TO OUR NEWSLETTER</h2>

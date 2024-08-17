@@ -5,7 +5,7 @@ function Header() {
     <header className="flex items-center justify-between p-4 bg-white shadow-md">
       <div className="flex items-center">
       <img 
-          src="pic2.png" 
+          src="https://i.ibb.co/hBFZWCr/pic2.png" 
           alt="User Avatarr" 
           className="w- h-8 ml-10"
         />
@@ -24,7 +24,7 @@ function Header() {
           </svg>
         </button>
         <img 
-          src="pic1.png" 
+          src="https://i.ibb.co/jrYkrL7/pic1.png" 
           alt="User Avatar" 
           className="w-8 h-8 rounded-full"
         />

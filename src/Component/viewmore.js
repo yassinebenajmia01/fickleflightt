@@ -5,16 +5,16 @@ import { Link } from 'react-router-dom';
 function ViewMore() {
   const moreDestinations = [
     {
-      image: 'spain.png',
+      image: 'https://i.im.ge/2024/08/17/fL8D7T.spain.png',
     },
     {
-      image: 'italyy.png',
+      image: 'https://i.im.ge/2024/08/17/fL8LpL.italyy.png',
     },
     {
-      image: 'jpn.png',
+      image: 'https://i.im.ge/2024/08/17/fL8h1G.jpn.png',
     },
     {
-      image: 'brazil.png',
+      image: 'https://i.im.ge/2024/08/17/fL8N76.brazil.png',
     },
   ];
 

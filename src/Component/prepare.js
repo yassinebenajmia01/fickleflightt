@@ -7,37 +7,37 @@ function Prepare() {
       <div className="flex flex-wrap justify-center gap-48 mt-10">
         <div className="flex flex-col items-center">
           <div className="prepare-icon">
-            <img src="hotel.png" alt="Hotel" className="h-[75px] w-[65px]" />
+            <img src="https://i.im.ge/2024/08/17/fLgBm8.Hotel.png" alt="Hotel" className="h-[75px] w-[65px]" />
           </div>
           <div className="prepare-text"></div>
         </div>
         <div className="flex flex-col items-center">
           <div className="prepare-icon">
-            <img src="attractions.png" alt="Attractions" className="h-[75px] w-[65px]" />
+            <img src="https://i.im.ge/2024/08/17/fL8TbD.Attractions.png" alt="Attractions" className="h-[75px] w-[65px]" />
           </div>
           <div className="prepare-text"></div>
         </div>
         <div className="flex flex-col items-center">
           <div className="prepare-icon">
-            <img src="eats.png" alt="Eats" className="h-[75px] w-[65px]" />
+            <img src="https://i.im.ge/2024/08/17/fL8oB4.Eats.png" alt="Eats" className="h-[75px] w-[65px]" />
           </div>
           <div className="prepare-text"></div>
         </div>
         <div className="flex flex-col items-center">
           <div className="prepare-icon">
-            <img src="commute.png" alt="Commute" className="h-[75px] w-[65px]" />
+            <img src="https://i.im.ge/2024/08/17/fLgGZh.Commute.png" alt="Commute" className="h-[75px] w-[65px]" />
           </div>
           <div className="prepare-text"></div>
         </div>
         <div className="flex flex-col items-center">
           <div className="prepare-icon">
-            <img src="taxi.png" alt="Taxi" className="h-[75px] w-[65px]" />
+            <img src="https://i.im.ge/2024/08/17/fL8uHp.Taxi.png" alt="Taxi" className="h-[75px] w-[65px]" />
           </div>
           <div className="prepare-text"></div>
         </div>
         <div className="flex flex-col items-center">
           <div className="prepare-icon">
-            <img src="Movies.png" alt="Movies" className="h-[75px] w-[65px]" />
+            <img src="https://i.im.ge/2024/08/17/fL8sbW.Movies.png" alt="Movies" className="h-[75px] w-[65px]" />
           </div>
           <div className="prepare-text"></div>
         </div>

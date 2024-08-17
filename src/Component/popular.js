@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 function Popular() {
   const destinations = [
     {
-      image: 'paaris.png',
+      image: 'https://i.im.ge/2024/08/17/fLgiTY.paaris.png',
     },
     {
-      image: 'greece.png',
+      image: 'https://i.im.ge/2024/08/17/fLgmsq.greece.png',
     },
     {
-      image: 'norway.png',
+      image: 'https://i.im.ge/2024/08/17/fLgEUW.norway.png',
     },
     {
-      image: 'tsc.png',
+      image: 'https://i.im.ge/2024/08/17/fLg3BT.tsc.png',
     },
   ];
 

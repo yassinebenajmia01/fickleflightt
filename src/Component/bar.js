@@ -4,7 +4,7 @@ function Bar() {
   return (
     <div className="relative w-full h-[500px]">
       
-      <img src="pic3.png" alt="background" className="w-full h-[120%] object-cover" />
+      <img src="https://i.im.ge/2024/08/17/fLgWma.pic3.png" alt="background" className="w-full h-[120%] object-cover" />
 
       
       <div className="absolute top-28 w-full text-center text-white">

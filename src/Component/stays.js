@@ -12,7 +12,7 @@ function Stays() {
       price: '$575/night',
       rating: '4.9',
       reviews: '60 reviews',
-      image: 'ms.png',
+      image: 'https://fickleflight-locofy-hasura.netlify.app/unsplashrlwe8f8anoc@2x.png',
       videoLink: 'https://www.youtube.com/watch?v=vj9ett3Igwk', 
     },
     {
@@ -21,7 +21,7 @@ function Stays() {
       price: '$360/night',
       rating: '4.8',
       reviews: '116 reviews',
-      image: 'ds.png',
+      image: 'https://fickleflight-locofy-hasura.netlify.app/unsplashtsn8bpopveo@2x.png',
       videoLink: 'https://www.youtube.com/embed/T9ShLWKOxFk',
     },
     {
@@ -30,7 +30,7 @@ function Stays() {
       price: '$420/night',
       rating: '4.7',
       reviews: '78 reviews',
-      image: 'ah.png',
+      image: 'https://fickleflight-locofy-hasura.netlify.app/unsplashrlwe8f8anoc1@2x.png',
       videoLink: 'https://www.youtube.com/embed/chpwLUiGQbQ',
     },
     {
@@ -39,7 +39,7 @@ function Stays() {
       price: '$244/night',
       rating: '4.6',
       reviews: '63 reviews',
-      image: 'lli.png',
+      image: 'https://fickleflight-locofy-hasura.netlify.app/unsplashyqrybvxug5q@2x.png',
       videoLink: 'https://www.youtube.com/embed/WteZwxsvICc',
     },
   ];

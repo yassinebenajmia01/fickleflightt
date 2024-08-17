@@ -6,7 +6,7 @@ function Footerr() {
       <div className="container mx-auto flex flex-col md:flex-row justify-between">
         <div className="mb-6 md:mb-0 ">
         <img 
-            src="pic2.png" 
+            src="https://i.ibb.co/hBFZWCr/pic2.png" 
             alt="FickleFlight Logo" 
             className="w-auto h-8 ml-10 brightness-0 invert opacity-100"
 

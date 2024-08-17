@@ -7,25 +7,25 @@ function AllHolidays() {
         name: 'Barcelona',
         duration: '7C8L',
         price: '$1211',
-        image: 'brc.jpg', 
+        image: 'https://i.im.ge/2024/08/17/fL8Y0M.brc.jpeg', 
       },
       {
         name: 'Greece',
         duration: '9M5F',
         price: '$1639',
-        image: 'grc.jpg', 
+        image: 'https://i.ibb.co/ypW57CX/grc.jpg', 
       },
       {
         name: 'New York',
         duration: '1K3W',
         price: '$539',
-        image: 'new york.jpeg', 
+        image: 'https://i.im.ge/2024/08/17/fL8bcY.new-york.jpeg', 
       },
       {
         name: 'Marrakech',
         duration: 'X7I5',
         price: '$500',
-        image: 'mr.jpg', 
+        image: 'https://i.ibb.co/KNkByx3/mr.jpg', 
       },
   ];
 

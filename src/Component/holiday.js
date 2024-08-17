@@ -7,25 +7,25 @@ function Holiday() {
       name: 'Bali',
       duration: '4D3N',
       price: '$899',
-      image: 'bali.png', 
+      image: 'https://i.im.ge/2024/08/17/fL8PCF.bali.png', 
     },
     {
       name: 'Swiss',
       duration: '6D5N',
       price: '$900',
-      image: 'switzerland.png', 
+      image: 'https://i.im.ge/2024/08/17/fL8tpK.Switzerland.png', 
     },
     {
       name: 'Boracay',
       duration: '5D4N',
       price: '$699',
-      image: 'boracay.png', 
+      image: 'https://i.ibb.co/KrBfLVj/Boracay.png', 
     },
     {
       name: 'Palawan',
       duration: '4D3N',
       price: '$789',
-      image: 'palawan.png', 
+      image: 'https://i.im.ge/2024/08/17/fL8A29.palawan.png', 
     },
   ]
 
