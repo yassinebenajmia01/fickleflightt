@@ -14,6 +14,8 @@ import Search from "./pages/search";
 import AllHolidays from './Component/allholidays';
 import AllStays from './Component/allstays';
 import Booked from './pages/booked';
+import Hotels from './pages/hotels';
+import Maps from './pages/map';
 
 function App() {
   return (
@@ -46,6 +48,7 @@ function App() {
           } />
           <Route path="/allholidays" element={<><Header /><AllHolidays /></>} />
           <Route path="/allstays" element={<><Header /><AllStays /></>} />
+          <Route path="/hotels" element={<><Header /><Hotels/><Maps/></>} />
 
 
         </Routes>
