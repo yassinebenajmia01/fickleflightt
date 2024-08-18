@@ -5,7 +5,8 @@ function Booked() {
     const flightResults = [
         {
           airline: 'Turkish Airlines',
-          time: '11:35 PM - 4:45 PM',
+          time1: '11:35PM' ,
+          time2: '4:45PM',
           duration: '33H 10M, 1-stop',
           from: 'SIN',
           to: 'LAX',
@@ -14,7 +15,8 @@ function Booked() {
         },
         {
           airline: 'Singapore Airlines',
-          time: '8:45 PM - 7:55 PM',
+          time1: '8:45PM',
+          time2: '7:55PM',
           duration: '15H 10M, 2-stops',
           from: 'SIN',
           to: 'LAX',
@@ -23,7 +25,8 @@ function Booked() {
         },
         {
           airline: 'Japan Airlines',
-          time: '8:20 PM - 9:50 PM',
+          time1: '8:20PM'  ,
+          time2:'9:50PM',
           duration: '17H 30M, 1-stop',
           from: 'SIN',
           to: 'LAX',
@@ -32,7 +35,8 @@ function Booked() {
         },
         {
           airline: 'ANA',
-          time: '6:35 PM - 9:50 PM',
+          time1: '6:35PM',
+          time2: '9:50PM',
           duration: '19H 15M, 1-stop',
           from: 'SIN',
           to: 'LAX',
@@ -41,7 +45,8 @@ function Booked() {
         },
         {
           airline: 'American Airlines',
-          time: '8:20 PM - 9:50 PM',
+          time1: '8:20PM',
+          time2:' 9:50PM',
           duration: '17H 30M, 1-stop',
           from: 'SIN',
           to: 'LAX',
@@ -50,7 +55,8 @@ function Booked() {
         },
         {
           airline: 'Turkish Airlines',
-          time: '11:35 PM - 4:45 PM',
+          time1: '11:35PM'  ,
+          time2:'4:45PM',
           duration: '33H 10M, 1-stop',
           from: 'SIN',
           to: 'LAX',
@@ -59,7 +65,8 @@ function Booked() {
         },
         {
           airline: 'Japan Airlines',
-          time: '10:25 PM - 9:10 AM',
+          time1: '10:25PM'  ,
+          time2:'9:10AM',
           duration: '26H 45M, 1-stop',
           from: 'SIN',
           to: 'LAX',
@@ -134,24 +141,30 @@ function Booked() {
               <img src={result.image} alt={result.airline} className="w-12 h-10 rounded-full mr-4" />
               <div>
                   <h3 className="text-lg font-semibold mt-8">{result.airline}</h3>
-                  <p className="text-lg font-semibold text-gray-700 ml-40 " >{result.from}</p>
+                  <p className="text-lg font-semibold text-gray-700 ml-40  " >{result.from}</p>
 
                 </div>
               </div>
-              <div className="text-center">
-              <p className="text-gray-600">{result.time}</p>
+              <div className="text-center relative">
+              <p className="text-blue-600 font-bold text-xl right-48 absolute top-[3%] ">{result.time1}</p>
+              <FaPlane size={30} className="mx-2 absolute my-[-3%]  ml-14"  color="#007bff"/>
 
-                <p className="text-gray-600 mt-8 ">{result.duration}</p>
+              <p className="text-blue-600 font-bold text-xl left-60 absolute top-[3%]">{result.time2}</p>
+
+
+                <p className="text-gray-400 mt-12 ">{result.duration}</p>
 
 
               </div>
               <p className="text-lg font-semibold text-gray-700 mt-14">{result.to}</p>
+              <div className="border-r-2 border-gray-200 h-28 mx-4 absolute right-[35%]"/>
 
-              <div className="text-blue-600 font-bold text-xl">{result.price}</div>
+              <div className="text-yellow-500 font-bold text-2xl mr-6">{result.price}</div>
+              
             </div>
           ))}
 
-          <button className="bg-blue-600 text-white py-2 px-4 rounded-full w-full">Show more results</button>
+          <button className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg w-60 h-20">Show more results</button>
         </div>
 
         <div className="col-span-3 ">
