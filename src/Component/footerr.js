@@ -31,7 +31,7 @@ function Footerr() {
         
         <div className="hidden md:block border-l border-white mx-8"></div>
 
-        <div className="flex justify-between w-full md:w-auto space-x-28 mr-80">
+        <div className="flex justify-between w-full md:w-auto space-x-28 ">
           <div>
             <h3 className="font-bold">Company</h3>
             <ul className="mt-2 space-y-2">
@@ -53,7 +53,7 @@ function Footerr() {
           <div>
             <h3 className="font-bold">More</h3>
             <ul className="mt-2 space-y-2">
-              <li><a href="#" className="hover:underline">Covid Advisory</a></li>
+              <li><a href="#" className="hover:underline">Covid  Advisory</a></li>
               <li><a href="#" className="hover:underline">Airline Fees</a></li>
               <li><a href="#" className="hover:underline">Tips</a></li>
               <li><a href="#" className="hover:underline">Quarantine Rules</a></li>

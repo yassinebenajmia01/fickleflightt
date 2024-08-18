@@ -1,6 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <header className="flex items-center justify-between p-4 bg-white shadow-md">
       <div className="flex items-center">
@@ -11,10 +16,10 @@ function Header() {
         />
       </div>
       <nav className="flex items-center space-x-6 ml-auto mr-16">
-        <a href="#" className="text-gray-700 hover:text-blue-600">Explore</a>
-        <a href="#" className="text-gray-700 hover:text-blue-600">Search</a>
-        <a href="#" className="text-gray-700 hover:text-blue-600">Hotels</a>
-        <a href="#" className="text-gray-700 hover:text-blue-600">Offers</a>
+        <button className="text-gray-700 hover:text-blue-600" onClick={() => { navigate("/explore") }}>Explore</button>
+        <button className="text-gray-700 hover:text-blue-600" onClick={() => { navigate("/search") }}>Search</button>
+        <Link to="/hotels" className="text-gray-700 hover:text-blue-600">Hotels</Link>
+        <Link to="/offers" className="text-gray-700 hover:text-blue-600">Offers</Link>
       </nav>
       <div className="flex items-center space-x-4">
         <button className="relative">

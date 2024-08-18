@@ -1,46 +1,58 @@
-import { BrowserRouter as Router,Routes } from "react-router-dom";
-import { Route,  } from 'react-router-dom';
-
-import Bar from "./Component/bar";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from "./Component/header";
 import Footer from "./Component/footer";
 import Footerr from "./Component/footerr";
-import Header from "./Component/header";
 import Popular from "./Component/popular";
-import Prepare from "./Component/prepare";
-import Recent from "./Component/recent";
-import Stays from "./Component/stays";
 import ViewMore from "./Component/viewmore";
+import Bar from "./Component/bar";
+import Recent from "./Component/recent";
+import Prepare from "./Component/prepare";
 import Holiday from "./Component/holiday";
-import AllHolidays from "./Component/allholidays";
-import AllStays from "./Component/allstays";
-
+import Stays from "./Component/stays";
+import Search from "./pages/search";
+import AllHolidays from './Component/allholidays';
+import AllStays from './Component/allstays';
+import Booked from './pages/booked';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Bar />
-      <Recent />
-      <Prepare />
+    <>
+      <Router>
+        <Routes>
+          <Route index element={
+            <>
+              <Header />
+              <Bar />
+              <Recent />
+              <Prepare />
+              <Popular />
+              <Holiday />
+              <Stays />
+            </>
+          } />
+          <Route path="/viewmore" element={<><Header /><ViewMore /></>} />
+          <Route path="/search" element={<><Header /><Search /><Booked/></>} />
+          <Route path="/explore" element={
+            <>
+              <Header />
+              <Bar />
+              <Recent />
+              <Prepare />
+              <Popular />
+              <Holiday />
+              <Stays />
+            </>
+          } />
+          <Route path="/allholidays" element={<><Header /><AllHolidays /></>} />
+          <Route path="/allstays" element={<><Header /><AllStays /></>} />
 
 
-      <Routes>
-        
-        <Route path="/" element={<Popular />} />
-        <Route path="/popular" element={<Popular />} />
-        <Route path="/viewmore" element={<ViewMore />} />
-        <Route path="/allholidays" element={<AllHolidays />} />
-        <Route path="/allstays" element={<AllStays />} />
-        
-        
-      </Routes>
-      <Holiday />
-
-
-      <Stays />
+        </Routes>
+      </Router>
       <Footer />
       <Footerr />
-    </Router>
+    </>
   );
 }
 
