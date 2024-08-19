@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaSlidersH } from 'react-icons/fa'; // Import the filter icon
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-
 
 function Maps() {
   const [selectedVideo, setSelectedVideo] = useState(null);
+
   const mapContainerStyle = {
     width: '100%',
     height: '100%',
@@ -86,7 +86,7 @@ function Maps() {
                     {hotel.rating} <span className="text-blue-500">({hotel.reviews} reviews</span>)
                   </span>
                 </div>
-                <p className="text-lg font-semibold mt-2 ">$S {hotel.price}/night</p>
+                <p className="text-lg font-semibold mt-2">$S {hotel.price}/night</p>
                 <button className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg">View Details</button>
               </div>
             </div>
@@ -112,21 +112,31 @@ function Maps() {
 
       {/* Right Side: Map */}
       <div className="w-2/3 p-4">
+        {/* Filter Button */}
+        <div className="flex items-center justify-end mb-4">
+          <button className="flex items-center text-gray-700 hover:text-gray-900">
+            <FaSlidersH className="mr-2" />
+            Filters
+          </button>
+        </div>
         <div className="h-full bg-gray-300 rounded-lg">
-          <LoadScript googleMapsApiKey="YOUR_API_KEY">
-            <GoogleMap
-              mapContainerStyle={mapContainerStyle}
-              center={center}
-              zoom={12}
-            >
-              {/* Add markers or other components here */}
-              <Marker position={center} />
-            </GoogleMap>
-          </LoadScript>
+          <GoogleMap
+            mapContainerStyle={mapContainerStyle}
+            center={center}
+            zoom={12}
+          >
+            <Marker position={center} />
+          </GoogleMap>
         </div>
       </div>
     </div>
   );
 }
 
-export default Maps;
+export default function WrappedMaps() {
+  return (
+    <LoadScript googleMapsApiKey="YOUR_API_KEY">
+      <Maps />
+    </LoadScript>
+  );
+}
