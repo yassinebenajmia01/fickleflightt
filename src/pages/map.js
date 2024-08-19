@@ -135,7 +135,7 @@ function Maps() {
 
 export default function WrappedMaps() {
   return (
-    <LoadScript googleMapsApiKey="YOUR_API_KEY">
+    <LoadScript googleMapsApiKey="AIzaSyCudkNLcO6HNpZwwcENGpoDr4ePbjVg4HU">
       <Maps />
     </LoadScript>
   );
