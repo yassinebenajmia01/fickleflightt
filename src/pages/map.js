@@ -1,7 +1,20 @@
-import React from 'react';
-import { FaStar, FaMapMarkerAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaStar } from 'react-icons/fa';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+
 
 function Maps() {
+  const [selectedVideo, setSelectedVideo] = useState(null);
+  const mapContainerStyle = {
+    width: '100%',
+    height: '100%',
+  };
+
+  const center = {
+    lat: 34.0522,
+    lng: -118.2437,
+  };
+
   const hotels = [
     {
       name: 'Holiday Inn Express',
@@ -9,6 +22,7 @@ function Maps() {
       reviews: 1136,
       price: 286,
       imgUrl: 'https://fickleflight-locofy-hasura.netlify.app/unsplashs6ch7n3eoqy@2x.png',
+      videoLink: 'https://www.youtube.com/watch?v=jWeum8tk4MI',
     },
     {
       name: 'Freehand Los Angeles',
@@ -30,8 +44,14 @@ function Maps() {
       reviews: 136,
       price: 286,
       imgUrl: 'https://fickleflight-locofy-hasura.netlify.app/unsplashs6ch7n3eoqy3@2x.png',
+      videoLink: 'https://www.youtube.com/watch?v=Vo5gTqDPgrA',
     },
   ];
+
+  const handleVideoClick = (videoLink) => {
+    const embeddableLink = videoLink.replace('watch?v=', 'embed/');
+    setSelectedVideo(embeddableLink);
+  };
 
   return (
     <div className="flex h-screen">
@@ -44,16 +64,26 @@ function Maps() {
               <img
                 src={hotel.imgUrl}
                 alt={hotel.name}
-                className="w-24 h-24 rounded-lg object-cover mr-4"
+                className="w-36 h-36 rounded-lg object-cover mr-6"  // Updated size
               />
               <div className="flex-grow">
-                <h3 className="text-lg font-medium">{hotel.name}</h3>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-medium">{hotel.name}</h3>
+                  {hotel.videoLink && (
+                    <button
+                      className="bg-transparent py-2 px-2 border border-sky-700 rounded-full"
+                      onClick={() => handleVideoClick(hotel.videoLink)}
+                    >
+                      ▶
+                    </button>
+                  )}
+                </div>
                 <div className="flex items-center text-yellow-500 mt-1">
                   {[...Array(Math.floor(hotel.rating))].map((_, i) => (
                     <FaStar key={i} />
                   ))}
                   <span className="ml-2 text-sm text-black">
-                    {hotel.rating} <span className='text-blue-500'>({hotel.reviews } reviews</span>)
+                    {hotel.rating} <span className="text-blue-500">({hotel.reviews} reviews</span>)
                   </span>
                 </div>
                 <p className="text-lg font-semibold mt-2 ">$S {hotel.price}/night</p>
@@ -62,17 +92,37 @@ function Maps() {
             </div>
           ))}
         </div>
+        {selectedVideo && (
+          <div className="mt-8">
+            <h3 className="text-2xl font-bold text-gray-800">Video</h3>
+            <div className="mt-4">
+              <iframe
+                width="560"
+                height="315"
+                src={selectedVideo}
+                title="Video Player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Right Side: Map */}
       <div className="w-2/3 p-4">
         <div className="h-full bg-gray-300 rounded-lg">
-          {/* Replace this with an actual map component */}
-          <img
-            src="https://via.placeholder.com/600x400"
-            alt="Map"
-            className="w-full h-full object-cover rounded-lg"
-          />
+          <LoadScript googleMapsApiKey="YOUR_API_KEY">
+            <GoogleMap
+              mapContainerStyle={mapContainerStyle}
+              center={center}
+              zoom={12}
+            >
+              {/* Add markers or other components here */}
+              <Marker position={center} />
+            </GoogleMap>
+          </LoadScript>
         </div>
       </div>
     </div>
