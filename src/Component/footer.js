@@ -11,7 +11,7 @@ function Footer() {
         <p className="text-gray-700 text-2xl font-bold mb-6">Get weekly updates</p>
 
         <div className="bg-white p-8 rounded-lg shadow-lg inline-block">
-          <p className="text-gray-700 mb-4">Fill in your details to join the party!</p>
+          <p className="text-gray-700 mb-4">Fill in your details to join the party !</p>
           <form className="text-left">
             <input
               type="text"
